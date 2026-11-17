@@ -9,7 +9,7 @@ from export_overlay import authored_project_asset, prior_client_source, standalo
 from workspace import REPO, file_path
 
 
-ROOT_ALLOWED = {".gitignore", ".gitattributes", "README.md", "patches/client.json"}
+ROOT_ALLOWED = {".gitignore", ".gitattributes", "LICENSE", "README.md", "patches/client.json"}
 PROTECTED = re.compile(rb"-----BEGIN (?:OPENSSH |RSA |ECDSA |EC )?PRIVATE KEY-----|gh[pousr]_[A-Za-z0-9]{35,}|github_pat_[A-Za-z0-9_]{60,}")
 MAX_BYTES = 6 * 1024 * 1024
 
