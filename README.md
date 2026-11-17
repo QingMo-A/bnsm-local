@@ -9,13 +9,16 @@
 ```powershell
 python tools/workspace.py hydrate --workspace "D:/自己的本地开发工作区"
 python tools/workspace.py build-server
+python tools/workspace.py build-windows --editor "D:/Unity/Editor/Unity.exe"
 ```
 
-Unity 工程位于 `LocalBuild/workspace/Project`，用 Unity 6.3 打开它。输入目录只读，输出目录必须是新目录。早期基底缺少新增的本地派生资源时，可用 `--local-extras` 指向自备补充目录，目录下按清单保留工程相对路径。脚本会列出具体缺项。成功导入的目录只供本机使用。
+Unity 工程位于 `LocalBuild/workspace/Project`，使用 Unity 6.3。上面的命令分别生成服务端核心和 Windows 游戏客户端。输入目录只读，输出目录必须是新目录。早期基底缺少新增的本地派生资源时，可用 `--local-extras` 指向自备补充目录，目录下按清单保留工程相对路径。脚本会列出具体缺项。成功导入的目录只供本机使用。
 
 ## 从原版 APK 提取
 
 目前匹配 `com.tencent.tmgp.bnsm19.5.3.914.apk`，以 `tools/original-apk.json` 的 SHA-256 为准。工具不会下载游戏。
+
+用 AssetRipper 2.0.0 的 `AssetRipper.GUI.Free.exe --headless --port 58493` 启动本地导出服务，另开终端运行下面的命令。ILSpy 的 `ilspycmd` 需在 PATH 中，也可通过 `--ilspy` 指定位置。
 
 ```powershell
 python tools/original_game.py unpack --apk "D:/原版/com.tencent.tmgp.bnsm19.5.3.914.apk"

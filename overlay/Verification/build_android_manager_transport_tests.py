@@ -14,7 +14,7 @@ common="""plugins { id 'com.android.application' }
 android {
  namespace '%s'; compileSdk 36
  defaultConfig { applicationId '%s'; minSdk 26; targetSdk 36; versionCode = %s; versionName 'test' }
- signingConfigs { test { storeFile file('C:/Users/Altsc/.android/debug.keystore'); storePassword 'android'; keyAlias 'androiddebugkey'; keyPassword 'android' } }
+ signingConfigs { test { storeFile file(new File(System.getProperty('user.home'), '.android/debug.keystore')); storePassword 'android'; keyAlias 'androiddebugkey'; keyPassword 'android' } }
  buildTypes { release { signingConfig signingConfigs.test; debuggable true } }
  compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
 }

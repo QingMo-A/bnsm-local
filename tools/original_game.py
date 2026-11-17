@@ -175,7 +175,7 @@ def export_unity(args):
                 raise ValueError("Expected a loopback AssetRipper endpoint.")
             return response.read().decode("utf-8", "replace")
 
-    with tempfile.TemporaryDirectory(prefix=".ripper-", dir=dest.parent) as temporary:
+    with tempfile.TemporaryDirectory(prefix=".ripper-", dir=dest.parent, ignore_cleanup_errors=True) as temporary:
         staging = Path(temporary) / "output"
         load = source
         if args.assembly:
@@ -197,8 +197,11 @@ def export_unity(args):
                                ScriptLanguageVersion="CSharp4", TargetVersion="5.6.6f2",
                                TextExportMode="Bytes", ShaderExportMode="Decompile", AudioExportFormat="PreferWav")
         api("/Settings/Update", settings.values)
-        api("/LoadFolder", {"Path": paths})
-        api("/Export/UnityProject", {"Path": str(staging)})
+        try:
+            api("/LoadFolder", {"Path": paths})
+            api("/Export/UnityProject", {"Path": str(staging)})
+        finally:
+            api("/Reset", {})
         project = staging / "ExportedProject"
         if not (project / "Assets").is_dir() or not (project / "ProjectSettings").is_dir():
             raise ValueError("AssetRipper did not produce an editable Unity project.")

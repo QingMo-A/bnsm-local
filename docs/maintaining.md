@@ -7,3 +7,10 @@
 提交前先检查 `git status --short`，再运行 `python tools/check_public.py` 和 `git diff --cached --check`。用一次干净克隆和自备基底验证 `hydrate` 与 `build-server`。正式客户端的发布包、安全签名、用户存档和原版资源都留在本机。
 
 原版资源处理的三个步骤可单独运行。更换 APK、热更新资源或 AssetRipper 版本容易改变导出的 GUID 和反编译文本。要支持新的本地基底，先对照补丁输入校验，再单独验证 Unity 场景引用及启动。保存兼容版本记录和修复步骤即可。
+
+## 当前验证范围
+
+- 已验证原版 APK 解包和启动图标的校验，另用现有 Windows Mono 版验证了解包和 ILSpy 反编译。
+- 已用 AssetRipper 2.0.0 将 APK 内容和本地可读的程序集导出为 Unity 工程，核对了原版主场景文件。
+- 客户端补丁逐文件从 v28 输入重建并校验。另用干净克隆导入现有开发基底，通过了 .NET 服务端核心和 Windows Unity 客户端编译。
+- APK 或 Windows 发行包提取结果到当前可玩版之间，仍需要兼容开发基底和本地派生资源。

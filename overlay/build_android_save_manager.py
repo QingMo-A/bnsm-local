@@ -10,7 +10,9 @@ def main():
     bridge=CACHE/'app/src/main/java/local/bnsm/bridge';bridge.mkdir(parents=True,exist_ok=True)
     shutil.copyfile(ROOT/'Project/Assets/Plugins/Android/ExportProvider.java',bridge/'ExportProvider.java')
     (CACHE/'local.properties').write_text('sdk.dir=C\\:/Android\n',encoding='utf-8')
-    env=dict(os.environ,GRADLE_USER_HOME='C:/BnsmModernBuildCache/GradleHome',BNSM_TRIAL_KEYSTORE='C:/Users/Altsc/.android/debug.keystore')
+    env=dict(os.environ)
+    env.setdefault('GRADLE_USER_HOME', 'C:/BnsmModernBuildCache/GradleHome')
+    env.setdefault('BNSM_TRIAL_KEYSTORE', str(Path.home()/'.android/debug.keystore'))
     command=[str(ANDROID/'OpenJDK/bin/java.exe'),'-classpath',str(ANDROID/'Tools/gradle/lib/gradle-launcher-9.3.1.jar'),'org.gradle.launcher.GradleMain','--console=plain','--max-workers=2','assembleRelease']
     log=ROOT/'Verification/android-save-manager-build.log'
     with log.open('wb') as out:subprocess.run(command,cwd=CACHE,env=env,stdout=out,stderr=subprocess.STDOUT,check=True)

@@ -130,6 +130,30 @@ def build_server(args):
                     "--configuration", "Release", "--nologo"], check=True, cwd=workspace)
 
 
+def build_windows(args):
+    workspace = args.workspace.resolve()
+    if not (workspace / "local-import.json").is_file():
+        raise ValueError("Run hydrate before building the game.")
+    editor = args.editor.resolve(strict=True)
+    output = args.output.resolve()
+    if LOCAL.resolve() not in output.parents or output.exists():
+        raise ValueError("Choose a new output directory under LocalBuild.")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    log = output.with_suffix(".log")
+    command = [
+        str(editor), "-batchmode", "-nographics", "-quit", "-projectPath",
+        str(workspace / "Project"), "-executeMethod", "BnsmModernBuild.Windows",
+        "-bnsm-compact", f"-bnsm-build-output={output}", "-logFile", str(log),
+    ]
+    print(f"Unity log: {log}", flush=True)
+    subprocess.run(command, cwd=workspace, check=True,
+                   creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+    report = json.loads((output / "build-result.json").read_text(encoding="utf-8-sig"))
+    if report.get("result") != "Succeeded" or not (output / "BnsmLocal.exe").is_file():
+        raise ValueError(f"Unity did not produce a Windows player. See {log}")
+    print(output)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
@@ -141,6 +165,11 @@ def main():
     build = commands.add_parser("build-server")
     build.add_argument("--workspace", type=Path, default=LOCAL / "workspace")
     build.set_defaults(run=build_server)
+    build = commands.add_parser("build-windows")
+    build.add_argument("--workspace", type=Path, default=LOCAL / "workspace")
+    build.add_argument("--editor", required=True, type=Path)
+    build.add_argument("--output", type=Path, default=LOCAL / "windows-player")
+    build.set_defaults(run=build_windows)
     args = parser.parse_args()
     try:
         args.run(args)
