@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>Bnsm.LocalServer</AssemblyName>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <NuGetAudit>false</NuGetAudit>
+    <DefineConstants>$(DefineConstants);BNSM_EMBEDDED_TESTS</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../HelperTrialTests/HelperCostumeRegression.cs" Link="HelperCostumeRegression.cs" />
+    <ProjectReference Include="../../ServerBuildSource/UnityHost/UnityHost.csproj" />
+    <Reference Include="Bnsm.ServerGameModel"><HintPath>../../ServerBuildSource/UnityHost/obj/Isolated/Bnsm.ServerGameModel.dll</HintPath><Aliases>game</Aliases></Reference>
+    <Reference Include="protobuf-net"><HintPath>../../ServerBuildSource/references/Managed/protobuf-net.dll</HintPath></Reference>
+    <Reference Include="Bnsm.ServerLegacyEngine"><HintPath>../../ServerBuildSource/UnityHost/obj/Isolated/Bnsm.ServerLegacyEngine.dll</HintPath></Reference>
+    <Reference Include="Live2DUnity"><HintPath>../../Project/Assets/Plugins/Live2DUnity.dll</HintPath></Reference>
+    <Compile Include="../../ServerBuildSource/LocalServer/GlobalUsings.cs" Link="GlobalUsings.cs" />
+    <Compile Include="../../ServerBuildSource/LocalServer/DebugApi.cs" Link="DebugApi.cs" />
+    <Compile Include="../../ServerBuildSource/LocalServer/FriendsTest.cs" Link="FriendsTest.cs" />
+    <Compile Include="../../ServerBuildSource/LocalServer/WorldChatTest.cs" Link="WorldChatTest.cs" />
+    <Compile Include="../../ServerBuildSource/LocalServer/MissionTest.cs" Link="MissionTest.cs" />
+    <Compile Include="../../ServerBuildSource/LocalServer/LootTest.cs" Link="LootTest.cs" />
+    <Compile Include="../../ServerBuildSource/LocalServer/GachaTest.cs" Link="GachaTest.cs" />
+    <Compile Include="../../ServerBuildSource/LocalServer/AdventureTest.cs" Link="AdventureTest.cs" />
+    <Compile Include="../../ServerBuildSource/LocalServer/ShopTest.cs" Link="ShopTest.cs" />
+    <Compile Include="../../ServerBuildSource/LocalServer/AttendanceTest.cs" Link="AttendanceTest.cs" />
+    <Compile Include="../../ServerBuildSource/LocalServer/ActivityTest.cs" Link="ActivityTest.cs" />
+    <Compile Include="../../ServerBuildSource/LocalServer/UpgradeTowerTest.cs" Link="UpgradeTowerTest.cs" />
+  <Compile Include="../BotWorldTests/*.cs" Exclude="../BotWorldTests/obj/**;../BotWorldTests/bin/**" /></ItemGroup>
+</Project>

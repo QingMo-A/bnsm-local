@@ -1,0 +1,36 @@
+{
+  "sourcePackage": "com.tencent.tmgp.bnsm19",
+  "sourceApkSha256": "391f9cadd574b684203e27baf9893e32ed1aca5e2b37dfad3eba89d657368c10",
+  "entries": [
+    {
+      "sourceEntry": "res/drawable-ldpi-v4/app_icon.png",
+      "path": "res\\mipmap-ldpi\\app_icon.png",
+      "sha256": "f4a73abd5f21c9c15c39a790d973c0d48031be4f47bc037f3e4fa438fff94a02"
+    },
+    {
+      "sourceEntry": "res/drawable-mdpi-v4/app_icon.png",
+      "path": "res\\mipmap-mdpi\\app_icon.png",
+      "sha256": "8d42c4bc066903f2d04397791ec57badac9dff44ee6798b94d92c70ccb62d86f"
+    },
+    {
+      "sourceEntry": "res/drawable-hdpi-v4/app_icon.png",
+      "path": "res\\mipmap-hdpi\\app_icon.png",
+      "sha256": "bbd3fe138828c61dfee5a502886bd671ada8498110046df8b8ab948fee860988"
+    },
+    {
+      "sourceEntry": "res/drawable-xhdpi-v4/app_icon.png",
+      "path": "res\\mipmap-xhdpi\\app_icon.png",
+      "sha256": "10752b2f8d32704283689c244a53bdce2fd3b59147a2c27107fc1eb55fca0617"
+    },
+    {
+      "sourceEntry": "res/drawable-xxhdpi-v4/app_icon.png",
+      "path": "res\\mipmap-xxhdpi\\app_icon.png",
+      "sha256": "d8a0a4ace29714728b1e6fdd47522934c2b3d175867d9039be1015e5d741a90b"
+    },
+    {
+      "sourceEntry": "res/drawable-xxxhdpi-v4/app_icon.png",
+      "path": "res\\mipmap-xxxhdpi\\app_icon.png",
+      "sha256": "3e9a3df7721f6a7c5e034cee68e4dcf954447566e96adf4993d312035d50cff8"
+    }
+  ]
+}

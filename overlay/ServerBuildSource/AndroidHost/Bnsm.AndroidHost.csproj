@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-android36.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationId>local.bnsm.serverhost</ApplicationId>
+    <ApplicationTitle>剑灵手机本地服（测试）</ApplicationTitle>
+    <ApplicationVersion>28</ApplicationVersion>
+    <ApplicationDisplayVersion>0.28-pvp-ladder</ApplicationDisplayVersion>
+    <SupportedOSPlatformVersion>26</SupportedOSPlatformVersion>
+    <RuntimeIdentifier>android-arm64</RuntimeIdentifier>
+    <!-- Original protobuf-net and protocol factory require reflection metadata. -->
+    <PublishTrimmed>false</PublishTrimmed>
+    <RunAOTCompilation>false</RunAOTCompilation>
+    <!-- Use dynamic JNI registration; .NET 10's generated marshal entry points
+         failed to bind MainActivity.n_onCreate after a Release update on device. -->
+    <AndroidEnableMarshalMethods>false</AndroidEnableMarshalMethods>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AndroidPackageFormats>apk</AndroidPackageFormats>
+    <NuGetAudit>false</NuGetAudit>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../ServerCore/Bnsm.ServerCore.csproj" />
+    <Reference Include="Assembly-CSharp"><HintPath>../build/Assembly-CSharp.dll</HintPath><Aliases>game</Aliases></Reference>
+    <Reference Include="protobuf-net"><HintPath>../references/Managed/protobuf-net.dll</HintPath></Reference>
+    <!-- BSC_DEFINE has Unity value-type fields even though this host renders no Unity scene. -->
+    <Reference Include="UnityEngine"><HintPath>../references/Managed/UnityEngine.dll</HintPath><Private>true</Private></Reference>
+    <Compile Include="../LocalServer/GlobalUsings.cs" Link="GlobalUsings.cs" />
+    <AndroidAsset Include="$(ServerContentArchive)" Link="server-content.zip" Condition="Exists('$(ServerContentArchive)')" />
+  </ItemGroup>
+  <Target Name="RequireServerContent" BeforeTargets="PrepareForBuild">
+    <Error Condition="!Exists('$(ServerContentArchive)')" Text="Run tools/build_android_local_server.py to supply the verified catalog archive." />
+  </Target>
+</Project>

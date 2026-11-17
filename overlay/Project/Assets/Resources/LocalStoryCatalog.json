@@ -1,0 +1,1244 @@
+{
+  "Version": 1,
+  "Stages": [
+    {
+      "Id": 8601,
+      "TemplateId": 49,
+      "BattleArt": "BellRoadBattle",
+      "Level": 25,
+      "Line": "Character",
+      "MenuLabel": "结识洪玄公",
+      "Title": "无日峰·骤雨",
+      "Opening": "雨夜，你在无日峰山道遇见一位陌生老人。他护着两名负伤弟子，却请你先去敲响后山的铜钟。",
+      "Scene": "铜钟一响，秦义绝的追兵封死退路。老人踏出山门，挥拳震开风雨。弟子喊出一声师父，你才知道他是洪玄公。",
+      "Goal": "击退山门追兵。首胜结识并解锁孤擎万钧 洪玄公，之后通关可获得他的升星碎片。",
+      "FirstReward": {
+        "Card": 1900040001
+      },
+      "ReplayReward": {
+        "Items": [
+          {
+            "Id": 1900041001,
+            "Count": 10
+          }
+        ]
+      },
+      "StoryId": "hong",
+      "StoryTitle": "洪玄公篇 · 无日峰骤雨"
+    },
+    {
+      "Id": 8602,
+      "TemplateId": 58,
+      "BattleArt": "OldForgeBattle",
+      "Level": 35,
+      "RequiredHero": 30161,
+      "RequiredHeroName": "极魔 千甄拳",
+      "Line": "Weapon",
+      "MenuLabel": "旧炉余火",
+      "Title": "极魔·旧炉余火",
+      "Opening": "千甄拳认出废炉门上的凿痕。那是他昔年习拳时留下的记号，炉底还压着一副未开刃的拳甲。",
+      "Scene": "守住炉口，夺回旧拳甲坯和锻材。千甄拳要亲手看看，这副拳甲还能不能承住他现在的拳。",
+      "Goal": "需要持有极魔 千甄拳。首胜取回拳甲坯和锻材，之后可从背包用原有锻造功能制成究极极魔拳甲。",
+      "FirstReward": {
+        "EquipmentBlanks": [
+          1900041002
+        ]
+      }
+    },
+    {
+      "Id": 8604,
+      "TemplateId": 58,
+      "BattleArt": "OldForgeBattle",
+      "Level": 35,
+      "RequiredHero": 1900040001,
+      "RequiredHeroName": "孤擎万钧 洪玄公",
+      "Line": "Weapon",
+      "MenuLabel": "孤擎遗锻",
+      "Title": "无日峰·孤擎遗锻",
+      "Opening": "山门重开后，洪玄公带你回到旧锻室。洪门弟子曾在这里熔炼山铁，锻炉被秦义绝的追兵封住。",
+      "Scene": "雷雨又至。你和洪玄公守住锻室，让最后一炉山铁冷却成坯。",
+      "Goal": "持有孤擎万钧 洪玄公后解锁。首胜取得孤擎耳环坯、项链坯、拳甲坯与首道锻材，之后可在背包锻造和觉醒。",
+      "FirstReward": {
+        "EquipmentBlanks": [
+          1900044290,
+          1900044291,
+          1900044292
+        ]
+      }
+    },
+    {
+      "Id": 8603,
+      "TemplateId": 26,
+      "BattleArt": "NightSakuraBattle",
+      "Level": 10,
+      "Line": "Outfit",
+      "MenuLabel": "夜樱归衣",
+      "Title": "夜樱·归衣",
+      "Opening": "茉莉在驿道捡到一截绣有樱花的腰带。米可认出这是那批走失的衣料，索菲娅记得驿站的灯还亮着。",
+      "Scene": "你沿灯火找到被围住的裁缝。三位助手商量着怎样用同一匹布做出三种穿法，你先替她们守住驿道。",
+      "Goal": "首胜获得青墨·夜樱共用服装与布料，与「夜樱初绽」首档共用领取记录。",
+      "FirstReward": {
+        "ClaimKey": "900011/1",
+        "Items": [
+          {
+            "Id": 1900030001,
+            "Count": 1
+          },
+          {
+            "Id": 280000011,
+            "Count": 8
+          }
+        ]
+      }
+    },
+    {
+      "Id": 8611,
+      "TemplateId": 26,
+      "BattleArt": "FerryBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 洪门未尽",
+      "MenuLabel": "竹林村·无名剑客",
+      "Title": "竹林村·无名剑客",
+      "Opening": "竹林村来了个不肯报姓名的剑客。他只打听一件事：无日峰大火那晚，走水路的人后来去了哪里。",
+      "Scene": "你刚领他去见渡工，码头就被人堵住。剑客绕到最前面，让你从侧面护住渡工。",
+      "Goal": "击退堵住码头的敌人。先稳住前排，再处理后排。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 5
+    },
+    {
+      "Id": 8612,
+      "TemplateId": 28,
+      "BattleArt": "FerryBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 洪门未尽",
+      "MenuLabel": "江渡·断缆",
+      "Title": "江渡·断缆",
+      "Opening": "渡工记得那一夜船上有三个人，两个伤员和一个抱着木匣的孩子。有人割断了缆绳，故意让船顺流而下。",
+      "Scene": "顺着旧河道找到渡口。岸边有人翻找船板，远处还有同伙在掩护。",
+      "Goal": "夺回船板上的渡船记号，找出撤离方向。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8611
+    },
+    {
+      "Id": 8613,
+      "TemplateId": 33,
+      "BattleArt": "FerryBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 洪门未尽",
+      "MenuLabel": "残碑·封路头目",
+      "Title": "残碑·封路头目",
+      "Opening": "残碑下住着一个当年逃出来的人。看见那套剑法，他叫了一声老小。剑客停住脚步，终于回了一句：是我。",
+      "Scene": "封路头目藏在护卫后面。老小把那人带进石墙后，让你先把路打通。",
+      "Goal": "魔王在后排。可控住护卫后打后排，也可先稳住队伍、逐个击破。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8612,
+      "Boss": true,
+      "SweepAfterStage": 8619,
+      "DailySweeps": 3,
+      "ReplayReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 1
+          }
+        ]
+      },
+      "FirstReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 6
+          }
+        ]
+      },
+      "ThreeStarReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 1
+          }
+        ]
+      }
+    },
+    {
+      "Id": 8614,
+      "TemplateId": 35,
+      "BattleArt": "BellRoadBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 洪门未尽",
+      "MenuLabel": "旧山道·灯火",
+      "Title": "旧山道·灯火",
+      "Opening": "幸存者认出了木匣上的印记，说旧钟响两声就去后山集合。这几天，山上又有人照着旧规矩敲钟。",
+      "Scene": "你和老小沿旧山道上去。每一盏灯都照得见前面一盏，偏偏照不见路旁藏着的人。",
+      "Goal": "沿山道推进，确认前方信号。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8613
+    },
+    {
+      "Id": 8615,
+      "TemplateId": 44,
+      "BattleArt": "BellRoadBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 洪门未尽",
+      "MenuLabel": "钟下·假信",
+      "Title": "钟下·假信",
+      "Opening": "老小摸出几封沾雨的信。字迹有些是他认得的，可写信的人早在那一夜就没能下山。",
+      "Scene": "敲钟的人从另一边跑了。你听见坡底有人求救，老小在岔路站了片刻，转身跟你往坡底走。",
+      "Goal": "清掉伏兵，打通被困者的撤离路线。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8614
+    },
+    {
+      "Id": 8616,
+      "TemplateId": 49,
+      "BattleArt": "BellRoadBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 洪门未尽",
+      "MenuLabel": "旧钟·守钟人",
+      "Title": "旧钟·守钟人",
+      "Opening": "守钟人用洪门旧信把幸存者骗了上来，只为逼出当年那条撤离路。老小把带血的旧信折好，塞回怀里。",
+      "Scene": "最后一批被困者还在钟台后面。老小留下护送，让你带队对付守钟人。",
+      "Goal": "魔王有前后排护卫。可以先扫掉掩护，也可集中控制、找机会直取魔王。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8615,
+      "Boss": true,
+      "SweepAfterStage": 8619,
+      "DailySweeps": 3,
+      "ReplayReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 2
+          }
+        ]
+      },
+      "FirstReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 12
+          }
+        ]
+      },
+      "ThreeStarReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 2
+          }
+        ]
+      }
+    },
+    {
+      "Id": 8617,
+      "TemplateId": 51,
+      "BattleArt": "SummitGateBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 洪门未尽",
+      "MenuLabel": "后山·带路的人",
+      "Title": "后山·带路的人",
+      "Opening": "被困者里有个当年跟船走的孩子，已经长大。他记得木匣装的是洪门弟子的名册，愿意带你们去找。",
+      "Scene": "去取名册的路被截断。老小把走在最前面的带路人拉到身后，这一次他让大家一起走。",
+      "Goal": "击退截路者，保护归途。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8616
+    },
+    {
+      "Id": 8618,
+      "TemplateId": 53,
+      "BattleArt": "SummitGateBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 洪门未尽",
+      "MenuLabel": "石室·未归名册",
+      "Title": "石室·未归名册",
+      "Opening": "石室里没人守，只有一本被翻开的名册。老小把没有回来的人一一念出来，最后把名册交给带路人。",
+      "Scene": "外面传来追兵的脚步。老小留下一盏灯，照着名册最后一页。",
+      "Goal": "先清近身敌人，再处理支援波次。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8617
+    },
+    {
+      "Id": 8619,
+      "TemplateId": 58,
+      "BattleArt": "SummitGateBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 洪门未尽",
+      "MenuLabel": "无日峰·浊气魔影",
+      "Title": "无日峰·浊气魔影",
+      "Opening": "浊气在出口凝出人形，像是那夜的山门又一次烧了起来。老小没有追过去，他站在最后一个撤离的人身后。",
+      "Scene": "等众人跨过山口，老小才拔剑。他看向你：走到这里，后面的路也一起走吧。",
+      "Goal": "先扛住前波，再为魔王波留住控制和爆发。首胜结识 SS 老小。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8618,
+      "Boss": true,
+      "SweepAfterStage": 8619,
+      "DailySweeps": 3,
+      "ReplayReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 3
+          }
+        ]
+      },
+      "FirstReward": {
+        "Card": 30181
+      },
+      "ThreeStarReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 3
+          }
+        ]
+      }
+    }
+  ],
+  "MaknaeActOnePreviewStages": [
+    {
+      "Id": 8621,
+      "TemplateId": 29,
+      "BattleArt": "FerryBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 一幕 无名的渡客",
+      "MapArt": "BambooVillageFerry",
+      "MenuLabel": "无名剑客",
+      "Title": "竹林村·无名剑客",
+      "Opening": "来了个不肯报姓名的剑客。他把一截旧船桨放到你面前，问无日峰大火那晚，谁肯冒雨撑船。",
+      "Scene": "你领他去码头，还没见到渡工，便有人把船向岸外推。剑客先按住船舷，让你从栈桥绕过去。",
+      "Goal": "护住栈桥，击退封锁渡口的人。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 8,
+      "EnemyLevelMaxDecrease": 5,
+      "Act": 1
+    },
+    {
+      "Id": 8622,
+      "TemplateId": 31,
+      "BattleArt": "FerryBattle",
+      "Level": 25,
+      "PreviousStage": 8621,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 一幕 无名的渡客",
+      "MenuLabel": "断缆",
+      "Title": "江渡·断缆",
+      "Opening": "断缆还挂在桩上，切口很平。岸边有人正把旧船板拖进水里。",
+      "Scene": "趁他们还没把船板放走，夺回船尾留的记号。",
+      "Goal": "在敌人拖走船板前打散河岸守卫。",
+      "BattleOnly": true,
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 8,
+      "EnemyLevelMaxDecrease": 5,
+      "Act": 1
+    },
+    {
+      "Id": 8623,
+      "TemplateId": 35,
+      "BattleArt": "FerryBattle",
+      "Level": 25,
+      "PreviousStage": 8622,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 一幕 无名的渡客",
+      "MenuLabel": "沉船货牌",
+      "Title": "浅滩·沉船货牌",
+      "Opening": "船板写着渡船的泊位。退潮后，你们在对应的石滩里摸到一块铜货牌。剑客用袖口擦掉泥，露出两个洪门弟子的名字。",
+      "Scene": "有人在上游敲了三下桨，岸边的搜船人立刻掉头。你把货牌收好，先护着剑客撤出浅滩。",
+      "Goal": "击退搜船人，带走铜货牌。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 8,
+      "EnemyLevelMaxDecrease": 5,
+      "Act": 1
+    },
+    {
+      "Id": 8624,
+      "TemplateId": 38,
+      "BattleArt": "FerryBattle",
+      "Level": 25,
+      "PreviousStage": 8623,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 一幕 无名的渡客",
+      "MenuLabel": "夜访渡工",
+      "Title": "芦湾·夜访渡工",
+      "Opening": "铜牌背后刻着芦湾地址。屋里的灯灭了，窗下却有脚印。",
+      "Scene": "清掉芦湾里盯梢的人，保住渡工留下的字条。",
+      "Goal": "打散芦湾伏兵，找出通往残碑的路。",
+      "BattleOnly": true,
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 8,
+      "EnemyLevelMaxDecrease": 5,
+      "Act": 1
+    },
+    {
+      "Id": 8625,
+      "TemplateId": 49,
+      "BattleArt": "FerryBattle",
+      "Level": 25,
+      "PreviousStage": 8624,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 一幕 无名的渡客",
+      "MenuLabel": "残碑封路",
+      "Title": "残碑·封路头目",
+      "Opening": "渡工在残碑后认出了那套剑法，喊了一声老小。剑客回头说是我，又把铜牌递了过去。渡工攥了很久，说碑上还少几个名字。",
+      "Scene": "封路头目的护卫围上来。老小留下护着渡工，请你带队从另一侧开路。等渡工能开口，两人再一起去找那份未归的名册。",
+      "Goal": "击败封路头目。可以先清护卫，也可以用控制争取机会打后排。首胜得 6 枚老小碎片。魔王的重打和扫荡每日共 3 次碎片奖励，每次 1 枚。",
+      "Boss": true,
+      "SweepAfterStage": 8625,
+      "DailySweeps": 3,
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 2,
+      "FirstReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 6
+          }
+        ]
+      },
+      "ReplayReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 1
+          }
+        ]
+      },
+      "ThreeStarReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 1
+          }
+        ]
+      },
+      "Act": 1,
+      "ShareRepeatRewardLimit": true
+    },
+    {
+      "Id": 8626,
+      "TemplateId": 40,
+      "BattleArt": "BellRoadBattle",
+      "Level": 25,
+      "PreviousStage": 8625,
+      "Act": 2,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 二幕 旧钟照夜",
+      "MenuLabel": "河灯逆流",
+      "Title": "河口·逆流的灯",
+      "Opening": "渡工那年把带伤的弟子送到下游。他指了指水面：顺流放灯是送别。今晚这些灯，却被人一只只系回了上游。",
+      "Scene": "老小捞起最暗的一只。灯座底下刻着洪门弟子换岗用的记号。有人还认识旧暗号。先去找岸上拉绳的人。",
+      "Goal": "夺下灯绳，追查谁在上游接应。",
+      "MapArt": "OldBellRoad",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5
+    },
+    {
+      "Id": 8627,
+      "TemplateId": 44,
+      "BattleArt": "BellRoadBattle",
+      "Level": 25,
+      "PreviousStage": 8626,
+      "Act": 2,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 二幕 旧钟照夜",
+      "MenuLabel": "驿站劫灯",
+      "Title": "山驿·劫灯",
+      "Opening": "山驿的几盏信灯照着空路。抢灯的人却从关着的后门摸了进来。",
+      "Scene": "别让掩护他们的弩手占住廊道。",
+      "Goal": "突破驿站守卫，把信灯夺回来。",
+      "BattleOnly": true,
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5
+    },
+    {
+      "Id": 8628,
+      "TemplateId": 48,
+      "BattleArt": "BellRoadBattle",
+      "Level": 25,
+      "PreviousStage": 8627,
+      "Act": 2,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 二幕 旧钟照夜",
+      "MenuLabel": "故人来信",
+      "Title": "钟房·故人来信",
+      "Opening": "驿站掌柜拿出两封信。信里说旧钟响两声，就有失散的师兄回来。老小看完，把信中的名字用指腹遮住。",
+      "Scene": "那人早在无日峰火里替他断后。信是假的，已经上山的几名幸存者却是真的。老小把信折好，叫你一同抄近路。",
+      "Goal": "辨出假信，沿着背风的石阶去救人。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5
+    },
+    {
+      "Id": 8629,
+      "TemplateId": 51,
+      "BattleArt": "BellRoadBattle",
+      "Level": 25,
+      "PreviousStage": 8628,
+      "Act": 2,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 二幕 旧钟照夜",
+      "MenuLabel": "后山抄道",
+      "Title": "松阶·截后路",
+      "Opening": "上山的石阶已经被封。驿卒曾拴绳的木桩还在，只够一队人通过。",
+      "Scene": "先打掉路边的哨兵，山下的人才敢跟上。",
+      "Goal": "打通松阶，抵达旧钟台。",
+      "BattleOnly": true,
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5
+    },
+    {
+      "Id": 8630,
+      "TemplateId": 60,
+      "BattleArt": "BellRoadBattle",
+      "Level": 25,
+      "PreviousStage": 8629,
+      "Act": 2,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 二幕 旧钟照夜",
+      "MenuLabel": "旧钟守钟人",
+      "Title": "旧钟·守钟人",
+      "Opening": "第二声钟响时，老小没应声。他认得敲钟的节拍，手法对，停顿却长了一拍。真正的接头人留这半拍，是给受伤的人喘口气。",
+      "Scene": "守钟人把名册当成猎户的索引。老小留在台阶下送人过桥。你去拔掉钟台的哨，给山里最后一队人留出退路。",
+      "Goal": "守住撤离路线，击败旧钟守钟人。首胜得 12 枚老小碎片；每日最多领取 3 次重打或扫荡碎片，每次 2 枚。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "Boss": true,
+      "SweepAfterStage": 8630,
+      "DailySweeps": 3,
+      "ShareRepeatRewardLimit": true,
+      "FirstReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 12
+          }
+        ]
+      },
+      "ReplayReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 2
+          }
+        ]
+      },
+      "ThreeStarReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 2
+          }
+        ]
+      }
+    },
+    {
+      "Id": 8631,
+      "TemplateId": 52,
+      "BattleArt": "SummitGateBattle",
+      "Level": 25,
+      "PreviousStage": 8630,
+      "Act": 3,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 三幕 山门未归",
+      "MenuLabel": "名册残页",
+      "Title": "旧道·名册残页",
+      "Opening": "从钟台救回来的孩子已经长大。他给你一张从木匣里取出的残页，上面几个人按了湿手印，最后一个空着。",
+      "Scene": "他要回无日峰替母亲补上那个名字。老小把残页交还给他。这回上山，由你走第一段，他守最后一段。",
+      "Goal": "带着名册残页通过回山旧道。",
+      "MapArt": "DawnAtWuriPeak",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 5
+    },
+    {
+      "Id": 8632,
+      "TemplateId": 54,
+      "BattleArt": "SummitGateBattle",
+      "Level": 25,
+      "PreviousStage": 8631,
+      "Act": 3,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 三幕 山门未归",
+      "MenuLabel": "界碑伏击",
+      "Title": "界碑·林下伏兵",
+      "Opening": "越过界碑就是旧洪门山道，追兵在林中等着你们带路。",
+      "Scene": "挡住追兵，替后队争取过碑的时间。",
+      "Goal": "清掉林下伏兵。",
+      "BattleOnly": true,
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 5
+    },
+    {
+      "Id": 8633,
+      "TemplateId": 57,
+      "BattleArt": "SummitGateBattle",
+      "Level": 25,
+      "PreviousStage": 8632,
+      "Act": 3,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 三幕 山门未归",
+      "MenuLabel": "旧灶冷灰",
+      "Title": "半山·旧灶冷灰",
+      "Opening": "半山的灶还是凉的。灶底有一只裂口的碗。老小说，最后一个下山的弟子给他盛过水，自己的碗却忘在这里。",
+      "Scene": "灰中留下的脚印朝崖边走。有人用废索把山门截成了两段，你们顺着脚印去找能重新系索的位置。",
+      "Goal": "护住沿途的伤员，查清断桥的去向。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 5
+    },
+    {
+      "Id": 8634,
+      "TemplateId": 62,
+      "BattleArt": "SummitGateBattle",
+      "Level": 25,
+      "PreviousStage": 8633,
+      "Act": 3,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 三幕 山门未归",
+      "MenuLabel": "山门断索",
+      "Title": "断崖·山门断索",
+      "Opening": "回山的吊桥在崖边，只剩几根承重索。有人正在对岸拆最后的桥桩。",
+      "Scene": "赶在木桩拔出前稳住桥头。",
+      "Goal": "摧毁对岸封锁，重新打通吊桥。",
+      "BattleOnly": true,
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 5
+    },
+    {
+      "Id": 8635,
+      "TemplateId": 65,
+      "BattleArt": "SummitGateBattle",
+      "Level": 25,
+      "PreviousStage": 8634,
+      "Act": 3,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 三幕 山门未归",
+      "MenuLabel": "碑下点名",
+      "Title": "石室·碑下点名",
+      "Opening": "名册完整的一半在石室里。你念名字，带路人一个个答。他应到母亲那一页时，山门外才传来脚步。",
+      "Scene": "老小把灯摆在出口边，一人领一人出去。有人回头问什么时候走，他说等名册念完。",
+      "Goal": "击退石室外的追兵，护着名册上山。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 5
+    },
+    {
+      "Id": 8636,
+      "TemplateId": 72,
+      "BattleArt": "SummitGateBattle",
+      "Level": 25,
+      "PreviousStage": 8635,
+      "Act": 3,
+      "Line": "Character",
+      "StoryId": "maknae",
+      "StoryTitle": "老小篇 · 三幕 山门未归",
+      "MenuLabel": "无日峰魔影",
+      "Title": "无日峰·浊气魔影",
+      "Opening": "山门亮起来，像那场大火烧了第二回。浊气捏出几个熟悉的影子，一个个喊他师兄。老小等最后一个渡客跨过石门，才拔剑。",
+      "Scene": "天亮前，把石门外的浊气压下去。回山时大家站在一起。老小把灯交给你，说下一段路他来带。",
+      "Goal": "击败无日峰魔影，首胜结识 SS 老小；每日最多领取 3 次重打或扫荡碎片，每次 3 枚。",
+      "EnemyLevelReference": 40,
+      "EnemyLevelMaxIncrease": 12,
+      "EnemyLevelMaxDecrease": 5,
+      "Boss": true,
+      "SweepAfterStage": 8636,
+      "DailySweeps": 3,
+      "ShareRepeatRewardLimit": true,
+      "FirstReward": {
+        "Card": 30181
+      },
+      "ReplayReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 3
+          }
+        ]
+      },
+      "ThreeStarReward": {
+        "Items": [
+          {
+            "Id": 205081313,
+            "Count": 3
+          }
+        ]
+      }
+    }
+  ],
+  "HongPreviewStages": [
+    {
+      "Id": 8641,
+      "TemplateId": 26,
+      "BattleArt": "BellRoadBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "hong",
+      "StoryTitle": "洪玄公篇 · 山雨护徒",
+      "Act": 1,
+      "MenuLabel": "雨打石阶",
+      "Title": "雨打石阶",
+      "Opening": "无日峰雨势骤急，山道上有个老人扶着两名伤者。",
+      "Scene": "老人让你替他们拦一息，他先给伤者扎紧布带。",
+      "Goal": "击退山道搜兵。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "MapArt": "OldBellRoad"
+    },
+    {
+      "Id": 8642,
+      "TemplateId": 27,
+      "BattleArt": "BellRoadBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "hong",
+      "StoryTitle": "洪玄公篇 · 山雨护徒",
+      "Act": 1,
+      "MenuLabel": "石阶截哨",
+      "Title": "石阶截哨",
+      "Opening": "搜兵准备绕到伤者身后。",
+      "Scene": "贴着石阶截住先行的斥候。",
+      "Goal": "先压制斥候，再处理后续援兵。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8641,
+      "BattleOnly": true
+    },
+    {
+      "Id": 8643,
+      "TemplateId": 28,
+      "BattleArt": "BellRoadBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "hong",
+      "StoryTitle": "洪玄公篇 · 山雨护徒",
+      "Act": 1,
+      "MenuLabel": "钟绳上的血",
+      "Title": "钟绳上的血",
+      "Opening": "后山老钟还在，钟绳已被人割断一半。",
+      "Scene": "旧钟敲两下是集合，敲三下则是下山。",
+      "Goal": "清出钟楼，让撤离信号传到内院。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8642
+    },
+    {
+      "Id": 8644,
+      "TemplateId": 33,
+      "BattleArt": "BellRoadBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "hong",
+      "StoryTitle": "洪玄公篇 · 山雨护徒",
+      "Act": 1,
+      "MenuLabel": "钟楼封锁",
+      "Title": "钟楼封锁",
+      "Opening": "封路头目循着钟声带人上山。",
+      "Scene": "老人守住钟绳，把钟楼前的退路交给你。",
+      "Goal": "魔王关。可以先控住前排护卫，也可以集中打后排头目。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8643,
+      "Boss": true,
+      "SweepAfterStage": 8652,
+      "DailySweeps": 3,
+      "ShareRepeatRewardLimit": true,
+      "ReplayReward": {
+        "Items": [
+          {
+            "Id": 1900041001,
+            "Count": 1
+          }
+        ]
+      },
+      "FirstReward": {
+        "Items": [
+          {
+            "Id": 1900041001,
+            "Count": 5
+          }
+        ]
+      },
+      "ThreeStarReward": {
+        "Items": [
+          {
+            "Id": 1900041001,
+            "Count": 1
+          }
+        ]
+      }
+    },
+    {
+      "Id": 8645,
+      "TemplateId": 34,
+      "BattleArt": "RainBridgeBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "hong",
+      "StoryTitle": "洪玄公篇 · 后山留灯",
+      "Act": 2,
+      "MenuLabel": "灯移到低处",
+      "Title": "灯移到低处",
+      "Opening": "过北桥须留灯，但亮处也会暴露伤者。",
+      "Scene": "老人决定把灯挪到桥栏底下，只照脚边。",
+      "Goal": "护住灯下的撤离队伍。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "MapArt": "DawnAtWuriPeak",
+      "PreviousStage": 8644
+    },
+    {
+      "Id": 8646,
+      "TemplateId": 35,
+      "BattleArt": "RainBridgeBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "hong",
+      "StoryTitle": "洪玄公篇 · 后山留灯",
+      "Act": 2,
+      "MenuLabel": "桥下绕兵",
+      "Title": "桥下绕兵",
+      "Opening": "追兵顺着水沟绕过桥面。",
+      "Scene": "在他们接近撤离队伍之前截断这股援兵。",
+      "Goal": "守住桥下通道。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8645,
+      "BattleOnly": true
+    },
+    {
+      "Id": 8647,
+      "TemplateId": 38,
+      "BattleArt": "RainBridgeBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "hong",
+      "StoryTitle": "洪玄公篇 · 后山留灯",
+      "Act": 2,
+      "MenuLabel": "渡口回身",
+      "Title": "渡口回身",
+      "Opening": "最后几名弟子已上桥，有人想折返找同门。",
+      "Scene": "洪玄公请你替他听听，桥另一头还有没有人应声。",
+      "Goal": "清理桥头，确认弟子全部撤过桥。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8646
+    },
+    {
+      "Id": 8648,
+      "TemplateId": 43,
+      "BattleArt": "RainBridgeBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "hong",
+      "StoryTitle": "洪玄公篇 · 后山留灯",
+      "Act": 2,
+      "MenuLabel": "北桥拒敌",
+      "Title": "北桥拒敌",
+      "Opening": "秦义绝的人追到桥头，带队者要夺走撤离名册。",
+      "Scene": "洪玄公把名册交给你，请你与他一起守到最后一人过桥。",
+      "Goal": "魔王关。首胜招募孤擎万钧 洪玄公。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8647,
+      "Boss": true,
+      "SweepAfterStage": 8652,
+      "DailySweeps": 3,
+      "ShareRepeatRewardLimit": true,
+      "ReplayReward": {
+        "Items": [
+          {
+            "Id": 1900041001,
+            "Count": 2
+          }
+        ]
+      },
+      "FirstReward": {
+        "Card": 1900040001,
+        "Items": [
+          {
+            "Id": 1900041001,
+            "Count": 4
+          }
+        ]
+      },
+      "ThreeStarReward": {
+        "Items": [
+          {
+            "Id": 1900041001,
+            "Count": 2
+          }
+        ]
+      }
+    },
+    {
+      "Id": 8649,
+      "TemplateId": 45,
+      "BattleArt": "SummitGateBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "hong",
+      "StoryTitle": "洪玄公篇 · 一人守门",
+      "Act": 3,
+      "MenuLabel": "门后留路",
+      "Title": "门后留路",
+      "Opening": "撤离完成，通往山门的旧道旁只剩三盏灯。",
+      "Scene": "洪玄公请你清通旁道，免得后来的人重蹈覆辙。",
+      "Goal": "清理山门侧道。首通得 5 张碎片。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "MapArt": "DawnAtWuriPeak",
+      "PreviousStage": 8648,
+      "BattleOnly": true,
+      "FirstReward": {
+        "Items": [
+          {
+            "Id": 1900041001,
+            "Count": 5
+          }
+        ]
+      }
+    },
+    {
+      "Id": 8650,
+      "TemplateId": 46,
+      "BattleArt": "SummitGateBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "hong",
+      "StoryTitle": "洪玄公篇 · 一人守门",
+      "Act": 3,
+      "MenuLabel": "雨停之前",
+      "Title": "雨停之前",
+      "Opening": "洪玄公听见山门外的人正等他说出鬼天剑下落。",
+      "Scene": "他让你带着名册先走，自己还想再听一遍下山口令。",
+      "Goal": "守住石廊，清掉冲进山门的先头队伍。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8649
+    },
+    {
+      "Id": 8651,
+      "TemplateId": 48,
+      "BattleArt": "SummitGateBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "hong",
+      "StoryTitle": "洪玄公篇 · 一人守门",
+      "Act": 3,
+      "MenuLabel": "空阶上的最后一阵",
+      "Title": "空阶上的最后一阵",
+      "Opening": "雨声盖住了脚步，最后一拨追兵已经登阶。",
+      "Scene": "拦住侧翼，给山门留下决战的空地。",
+      "Goal": "击退山门外最后一拨援兵。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8650,
+      "BattleOnly": true
+    },
+    {
+      "Id": 8652,
+      "TemplateId": 49,
+      "BattleArt": "SummitGateBattle",
+      "Level": 25,
+      "Line": "Character",
+      "StoryId": "hong",
+      "StoryTitle": "洪玄公篇 · 一人守门",
+      "Act": 3,
+      "MenuLabel": "一人守山门",
+      "Title": "一人守山门",
+      "Opening": "鬼天剑的追兵到了。洪玄公站在空山门前，头一回让你看见他松开双手。",
+      "Scene": "打退攻山的首领，守到山下传来三声钟响。",
+      "Goal": "终幕魔王。首胜给 10 张碎片，并开放三个魔王的碎片扫荡。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8651,
+      "Boss": true,
+      "SweepAfterStage": 8652,
+      "DailySweeps": 3,
+      "ShareRepeatRewardLimit": true,
+      "ReplayReward": {
+        "Items": [
+          {
+            "Id": 1900041001,
+            "Count": 3
+          }
+        ]
+      },
+      "FirstReward": {
+        "Items": [
+          {
+            "Id": 1900041001,
+            "Count": 10
+          }
+        ]
+      },
+      "ThreeStarReward": {
+        "Items": [
+          {
+            "Id": 1900041001,
+            "Count": 3
+          }
+        ]
+      }
+    },
+    {
+      "Id": 8661,
+      "TemplateId": 34,
+      "BattleArt": "OldForgeBattle",
+      "Level": 35,
+      "Line": "Weapon",
+      "StoryId": "hong-forge",
+      "StoryTitle": "洪玄公专武 · 孤擎遗锻",
+      "Act": 1,
+      "MenuLabel": "旧锻室开门",
+      "Title": "旧锻室开门",
+      "Opening": "山门重开，洪玄公带你去找弟子们昔日学徒用的旧锻室。",
+      "Scene": "炉子封死了，门缝里还卡着半张炉图。",
+      "Goal": "赶走占住旧室的散兵，取回半张炉图。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "MapArt": "OldBellRoad",
+      "RequiredHero": 1900040001,
+      "RequiredHeroName": "孤擎万钧 洪玄公"
+    },
+    {
+      "Id": 8662,
+      "TemplateId": 36,
+      "BattleArt": "OldForgeBattle",
+      "Level": 35,
+      "Line": "Weapon",
+      "StoryId": "hong-forge",
+      "StoryTitle": "洪玄公专武 · 孤擎遗锻",
+      "Act": 1,
+      "MenuLabel": "水槽试火",
+      "Title": "水槽试火",
+      "Opening": "旧图上缺进风口一角，墙边水槽还有前人试火的痕迹。",
+      "Scene": "守住汲水路，让洪玄公重新试火。",
+      "Goal": "打退水槽边的小队，首通领耳环坯和首道材料。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8661,
+      "RequiredHero": 1900040001,
+      "RequiredHeroName": "孤擎万钧 洪玄公",
+      "BattleOnly": true,
+      "FirstReward": {
+        "EquipmentBlanks": [
+          1900044290
+        ]
+      },
+      "HongForgeReward": true
+    },
+    {
+      "Id": 8663,
+      "TemplateId": 39,
+      "BattleArt": "RainBridgeBattle",
+      "Level": 35,
+      "Line": "Weapon",
+      "StoryId": "hong-forge",
+      "StoryTitle": "洪玄公专武 · 孤擎遗锻",
+      "Act": 1,
+      "MenuLabel": "矿道夺铁",
+      "Title": "矿道夺铁",
+      "Opening": "山铁被搬进旧矿道，守矿人正打算把它混进渣车。",
+      "Scene": "洪玄公认出弟子留下的刻痕，要你先护住矿道出口。",
+      "Goal": "魔王关。首通领项链坯；支线通关后可扫荡前段锻材。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8662,
+      "RequiredHero": 1900040001,
+      "RequiredHeroName": "孤擎万钧 洪玄公",
+      "Boss": true,
+      "SweepAfterStage": 8666,
+      "DailySweeps": 3,
+      "ShareRepeatRewardLimit": true,
+      "ReplayReward": {
+        "Items": [
+          {
+            "Id": 260000157,
+            "Count": 3
+          },
+          {
+            "Id": 260000158,
+            "Count": 3
+          },
+          {
+            "Id": 260000100,
+            "Count": 1
+          }
+        ]
+      },
+      "FirstReward": {
+        "EquipmentBlanks": [
+          1900044291
+        ]
+      },
+      "HongForgeReward": true
+    },
+    {
+      "Id": 8664,
+      "TemplateId": 41,
+      "BattleArt": "OldForgeBattle",
+      "Level": 35,
+      "Line": "Weapon",
+      "StoryId": "hong-forge",
+      "StoryTitle": "洪玄公专武 · 孤擎遗锻",
+      "Act": 1,
+      "MenuLabel": "冷水里的记号",
+      "Title": "冷水里的记号",
+      "Opening": "铁送回炉前，洪玄公在废坯上发现一个熟悉的刻字。",
+      "Scene": "他要重做最里侧那道扣眼，免得拳甲伤到用它的人。",
+      "Goal": "保住引水渠，让旧锻室恢复运转。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8663,
+      "RequiredHero": 1900040001,
+      "RequiredHeroName": "孤擎万钧 洪玄公"
+    },
+    {
+      "Id": 8665,
+      "TemplateId": 44,
+      "BattleArt": "OldForgeBattle",
+      "Level": 35,
+      "Line": "Weapon",
+      "StoryId": "hong-forge",
+      "StoryTitle": "洪玄公专武 · 孤擎遗锻",
+      "Act": 1,
+      "MenuLabel": "炉门外三步",
+      "Title": "炉门外三步",
+      "Opening": "炉温已经起来，几股追兵想趁此时夺门。",
+      "Scene": "你替他守住炉门外三步，不让战斗波及风箱。",
+      "Goal": "守住炉门，击退搅炉的散兵。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8664,
+      "RequiredHero": 1900040001,
+      "RequiredHeroName": "孤擎万钧 洪玄公",
+      "BattleOnly": true
+    },
+    {
+      "Id": 8666,
+      "TemplateId": 58,
+      "BattleArt": "OldForgeBattle",
+      "Level": 35,
+      "Line": "Weapon",
+      "StoryId": "hong-forge",
+      "StoryTitle": "洪玄公专武 · 孤擎遗锻",
+      "Act": 1,
+      "MenuLabel": "最后一炉",
+      "Title": "最后一炉",
+      "Opening": "最后一道落锤之前，领头的抢炉人来到院外。",
+      "Scene": "洪玄公请你守外炉，他这次会等你报平安再落锤。",
+      "Goal": "终幕魔王。首通领拳甲坯和首道材料，开放两个魔王的锻材扫荡。",
+      "EnemyLevelReference": 45,
+      "EnemyLevelMaxIncrease": 10,
+      "EnemyLevelMaxDecrease": 5,
+      "PreviousStage": 8665,
+      "RequiredHero": 1900040001,
+      "RequiredHeroName": "孤擎万钧 洪玄公",
+      "Boss": true,
+      "SweepAfterStage": 8666,
+      "DailySweeps": 3,
+      "ShareRepeatRewardLimit": true,
+      "ReplayReward": {
+        "Items": [
+          {
+            "Id": 260000053,
+            "Count": 3
+          },
+          {
+            "Id": 260000054,
+            "Count": 3
+          },
+          {
+            "Id": 260000254,
+            "Count": 1
+          },
+          {
+            "Id": 1900041001,
+            "Count": 2
+          }
+        ]
+      },
+      "FirstReward": {
+        "EquipmentBlanks": [
+          1900044292
+        ]
+      },
+      "HongForgeReward": true
+    }
+  ]
+}

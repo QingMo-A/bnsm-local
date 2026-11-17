@@ -1,0 +1,452 @@
+[
+  {
+    "id": 900001,
+    "name": "每日补给",
+    "description": "每日登录即可领取，领取后次日刷新。",
+    "period": "daily",
+    "level": 1,
+    "goals": [
+      {
+        "id": 1,
+        "name": "今日登录 {0} 次",
+        "counter": "LOGIN",
+        "target": 1,
+        "rewards": [
+          {
+            "type": "GOLD",
+            "id": 0,
+            "count": 30000
+          },
+          {
+            "type": "CASH",
+            "id": 0,
+            "count": 50
+          },
+          {
+            "type": "ITEM",
+            "id": 210002001,
+            "count": 500
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 900002,
+    "name": "江湖历练",
+    "description": "普通、英雄、传说冒险与扫荡均计入通关次数。",
+    "period": "daily",
+    "level": 1,
+    "goals": [
+      {
+        "id": 1,
+        "name": "今日通关冒险 {0} 次",
+        "counter": "MCT_CLEAR_PVE",
+        "target": 1,
+        "rewards": [
+          {
+            "type": "GOLD",
+            "id": 0,
+            "count": 30000
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "今日通关冒险 {0} 次",
+        "counter": "MCT_CLEAR_PVE",
+        "target": 5,
+        "rewards": [
+          {
+            "type": "CASH",
+            "id": 0,
+            "count": 50
+          },
+          {
+            "type": "ITEM",
+            "id": 210002001,
+            "count": 1000
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "今日通关冒险 {0} 次",
+        "counter": "MCT_CLEAR_PVE",
+        "target": 10,
+        "rewards": [
+          {
+            "type": "CASH",
+            "id": 0,
+            "count": 100
+          },
+          {
+            "type": "GOLD",
+            "id": 0,
+            "count": 50000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 900003,
+    "name": "挑战有礼",
+    "description": "参与风云棋盘、势力战和挑战塔，完成后领取奖励。",
+    "period": "daily",
+    "level": 30,
+    "goals": [
+      {
+        "id": 1,
+        "name": "今日投掷棋盘骰子 {0} 次",
+        "counter": "MCT_CAST_BATTLE_BOARD_DICE",
+        "target": 1,
+        "rewards": [
+          {
+            "type": "CASH",
+            "id": 0,
+            "count": 30
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "今日通关势力战或资源副本 {0} 次",
+        "counter": "MCT_CLEAR_RESOURCE_DUNGEON",
+        "target": 1,
+        "rewards": [
+          {
+            "type": "ITEM",
+            "id": 210002001,
+            "count": 1500
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "今日战胜挑战塔关卡 {0} 次",
+        "counter": "MCT_WIN_CHALLENGE_STAGE",
+        "target": 1,
+        "rewards": [
+          {
+            "type": "CASH",
+            "id": 0,
+            "count": 50
+          },
+          {
+            "type": "GOLD",
+            "id": 0,
+            "count": 30000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 900004,
+    "name": "每周目标",
+    "description": "本周累计完成目标领奖，每周一零点重置。",
+    "period": "weekly",
+    "level": 1,
+    "goals": [
+      {
+        "id": 1,
+        "name": "本周累计登录 {0} 天",
+        "counter": "LOGIN",
+        "target": 3,
+        "rewards": [
+          {
+            "type": "CASH",
+            "id": 0,
+            "count": 150
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "本周通关冒险 {0} 次",
+        "counter": "MCT_CLEAR_PVE",
+        "target": 30,
+        "rewards": [
+          {
+            "type": "CASH",
+            "id": 0,
+            "count": 300
+          },
+          {
+            "type": "GOLD",
+            "id": 0,
+            "count": 150000
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "本周投掷棋盘骰子 {0} 次",
+        "counter": "MCT_CAST_BATTLE_BOARD_DICE",
+        "target": 10,
+        "rewards": [
+          {
+            "type": "CASH",
+            "id": 0,
+            "count": 200
+          },
+          {
+            "type": "ITEM",
+            "id": 210002001,
+            "count": 3000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 900005,
+    "name": "成长之路",
+    "description": "达到对应角色等级即可领取，每档奖励限领一次。",
+    "period": "once",
+    "level": 1,
+    "goals": [
+      {
+        "id": 1,
+        "name": "角色等级达到 {0} 级",
+        "counter": "LEVEL",
+        "target": 20,
+        "rewards": [
+          {
+            "type": "CASH",
+            "id": 0,
+            "count": 100
+          },
+          {
+            "type": "GOLD",
+            "id": 0,
+            "count": 50000
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "角色等级达到 {0} 级",
+        "counter": "LEVEL",
+        "target": 40,
+        "rewards": [
+          {
+            "type": "CASH",
+            "id": 0,
+            "count": 200
+          },
+          {
+            "type": "ITEM",
+            "id": 210002001,
+            "count": 2000
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "角色等级达到 {0} 级",
+        "counter": "LEVEL",
+        "target": 60,
+        "rewards": [
+          {
+            "type": "CASH",
+            "id": 0,
+            "count": 300
+          },
+          {
+            "type": "GOLD",
+            "id": 0,
+            "count": 150000
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "角色等级达到 {0} 级",
+        "counter": "LEVEL",
+        "target": 90,
+        "rewards": [
+          {
+            "type": "CASH",
+            "id": 0,
+            "count": 500
+          },
+          {
+            "type": "ITEM",
+            "id": 210002001,
+            "count": 5000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 900006,
+    "name": "七日登录礼",
+    "description": "恢复原版七日登录奖励。更新后累计登录七天可领完全部奖励，无需连续登录，每个角色只领一轮。",
+    "period": "once",
+    "level": 1,
+    "loginPromotion": 200072,
+    "goals": []
+  },
+  {
+    "id": 900007,
+    "name": "跨服江湖历练",
+    "description": "恢复原版参与奖励。真实完成对战即可计数，胜负均可，中途退出不计入；每周一重置。",
+    "period": "weekly",
+    "level": 30,
+    "goals": [
+      {
+        "id": 1,
+        "name": "本周完成跨服江湖大战 {0} 场",
+        "sourceMission": 9532
+      },
+      {
+        "id": 2,
+        "name": "本周完成跨服江湖大战 {0} 场",
+        "sourceMission": 9533
+      },
+      {
+        "id": 3,
+        "name": "本周完成跨服江湖大战 {0} 场",
+        "sourceMission": 9534
+      }
+    ]
+  },
+  {
+    "id": 900008,
+    "name": "比武场历练",
+    "description": "恢复原版比武场参与奖励。真实完成对战即可计数，胜负均可，中途退出不计入；每周一重置。",
+    "period": "weekly",
+    "level": 20,
+    "goals": [
+      {
+        "id": 1,
+        "name": "本周完成比武场对战 {0} 场",
+        "sourceMission": 9540
+      },
+      {
+        "id": 2,
+        "name": "本周完成比武场对战 {0} 场",
+        "sourceMission": 9541
+      },
+      {
+        "id": 3,
+        "name": "本周完成比武场对战 {0} 场",
+        "sourceMission": 9542
+      }
+    ]
+  },
+  {
+    "id": 900009,
+    "name": "武林至尊历练",
+    "description": "恢复原版武林至尊参与奖励。真实完成对战即可计数，胜负均可，中途退出不计入；每周一重置。",
+    "period": "weekly",
+    "level": 60,
+    "goals": [
+      {
+        "id": 1,
+        "name": "本周完成武林至尊对战 {0} 场",
+        "sourceMission": 9588
+      },
+      {
+        "id": 2,
+        "name": "本周完成武林至尊对战 {0} 场",
+        "sourceMission": 9589
+      },
+      {
+        "id": 3,
+        "name": "本周完成武林至尊对战 {0} 场",
+        "sourceMission": 9590
+      }
+    ]
+  },
+  {
+    "id": 900010,
+    "name": "门派同心",
+    "description": "恢复原版门派签到奖励。只计算本人实际签到，不叠加门派人机的签到；每周一重置。",
+    "period": "weekly",
+    "level": 17,
+    "goals": [
+      {
+        "id": 1,
+        "name": "本周完成门派签到 {0} 次",
+        "sourceMission": 9578
+      },
+      {
+        "id": 2,
+        "name": "本周完成门派签到 {0} 次",
+        "sourceMission": 9580
+      },
+      {
+        "id": 3,
+        "name": "本周完成门派签到 {0} 次",
+        "sourceMission": 9584
+      }
+    ]
+  },
+  {
+    "id": 900011,
+    "name": "夜樱初绽",
+    "description": "青墨·夜樱共用服装活动。茉莉、米可、索菲娅穿戴同一件服装时各显对应款式，最高强化+10。累计通关冒险3、30、100次领取服装、同款副本和原版布料；有效扫荡按实际次数计数，已记录的累计进度有效。每档限领一次，不随每日或每周重置。强化仍需原版金币。",
+    "period": "once",
+    "level": 1,
+    "goals": [
+      {
+        "id": 1,
+        "name": "累计通关冒险 {0} 次 · 夜樱共用服装",
+        "counter": "MCT_CLEAR_PVE",
+        "target": 3,
+        "rewards": [
+          {
+            "type": "ITEM",
+            "id": 1900030001,
+            "count": 1
+          },
+          {
+            "type": "ITEM",
+            "id": 280000011,
+            "count": 8
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "累计通关冒险 {0} 次 · 夜樱强化补给",
+        "counter": "MCT_CLEAR_PVE",
+        "target": 30,
+        "rewards": [
+          {
+            "type": "ITEM",
+            "id": 1900030001,
+            "count": 10
+          },
+          {
+            "type": "ITEM",
+            "id": 280000012,
+            "count": 16
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "累计通关冒险 {0} 次 · 夜樱强化补给",
+        "counter": "MCT_CLEAR_PVE",
+        "target": 100,
+        "rewards": [
+          {
+            "type": "ITEM",
+            "id": 1900030001,
+            "count": 25
+          },
+          {
+            "type": "ITEM",
+            "id": 280000013,
+            "count": 50
+          }
+        ]
+      }
+    ]
+  }
+]

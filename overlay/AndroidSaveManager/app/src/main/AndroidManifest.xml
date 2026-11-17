@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <uses-permission android:name="local.bnsm.integratedtest.permission.MANAGE_SAVES" />
+  <queries><package android:name="local.bnsm.integratedtest" /></queries>
+  <application android:label="剑灵存档管家" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:allowBackup="false" android:icon="@drawable/cat">
+    <activity android:name=".MainActivity" android:exported="true" android:configChanges="orientation|screenSize|smallestScreenSize|keyboardHidden|fontScale|density|uiMode">
+      <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+    </activity>
+    <provider android:name="local.bnsm.bridge.ExportProvider" android:authorities="local.bnsm.savemanager.exports" android:exported="false" android:grantUriPermissions="true" />
+    <provider android:name=".IncomingProvider" android:authorities="local.bnsm.savemanager.incoming" android:exported="false" android:grantUriPermissions="true" />
+  </application>
+</manifest>

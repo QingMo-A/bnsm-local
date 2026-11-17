@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+  <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+  <permission android:name="local.bnsm.serverhost.permission.BIND_GAME" android:protectionLevel="normal" />
+  <application android:allowBackup="false" android:label="剑灵手机本地服（测试）" android:networkSecurityConfig="@xml/local_network_security">
+    <service android:name="local.bnsm.serverhost.ServerService" android:exported="false" android:foregroundServiceType="specialUse">
+      <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="User-started offline game server listening only on device loopback while playing" />
+    </service>
+    <service android:name="local.bnsm.serverhost.GameBindingService" android:exported="true" android:permission="local.bnsm.serverhost.permission.BIND_GAME" />
+  </application>
+</manifest>

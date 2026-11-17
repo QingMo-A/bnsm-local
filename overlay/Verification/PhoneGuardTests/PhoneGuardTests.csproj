@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>disable</Nullable><NoWarn>0436;0618;0649</NoWarn></PropertyGroup><ItemGroup>
+<Compile Include="../../Project/Assets/Scripts/Assembly-CSharp/SocketBase.cs" Link="SocketBase.cs" />
+<Compile Include="../../Project/Assets/Scripts/Assembly-CSharp/LocalDiagnosticLog.cs" Link="LocalDiagnosticLog.cs" />
+<Reference Include="Assembly-CSharp"><HintPath>../../ServerBuildSource/build/Assembly-CSharp.dll</HintPath></Reference>
+<Reference Include="protobuf-net"><HintPath>../../ServerBuildSource/references/Managed/protobuf-net.dll</HintPath></Reference>
+<Reference Include="UnityEngine"><HintPath>../../ServerBuildSource/references/Managed/UnityEngine.dll</HintPath></Reference>
+</ItemGroup></Project>

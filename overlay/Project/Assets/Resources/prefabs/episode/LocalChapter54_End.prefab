@@ -1,0 +1,221 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1709254077376921
+GameObject:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - component: {fileID: 4730242686860875}
+  - component: {fileID: 114724804207875695}
+  - component: {fileID: 114618682377417806}
+  - component: {fileID: 114587765826080250}
+  - component: {fileID: 114900000000000002}
+  - component: {fileID: 114900000000000003}
+  - component: {fileID: 114900000000000004}
+  - component: {fileID: 114900000000000005}
+  - component: {fileID: 114709867586078768}
+  - component: {fileID: 114243736805655561}
+  m_Layer: 0
+  m_Name: LocalChapter54_End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4730242686860875
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1709254077376921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114724804207875695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1709254077376921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ef8e8f1dd37d8a08bc2b13707636c47, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  chapterName: LocalChapter54_End
+  replayTitleAlias: '第54章 林中两路'
+--- !u!114 &114618682377417806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1709254077376921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c785edf1cf40659ed55dfa51a4eb9489, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Order: 0
+  stepType: 0
+  fadeIn: 1
+  waitTimeToEnd: 1
+  fieldPrefabLink:
+    assetPath:
+    localize: 0
+    notInResources: 0
+    assetObject: {fileID: 0}
+  useExtraHelper: 0
+  extraHelper: 0
+  npcInfos:
+  - id: 2511030
+    name: bspc
+    pos: {x: -40, y: -75, z: 0}
+    scaleRate: {x: 1.1, y: 1.1, z: 1.1}
+--- !u!114 &114587765826080250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1709254077376921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6567c8c6ec46fa223e2360a4fb344d24, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Order: 1
+  stepType: 3
+  waitTimeToEnd: 1.2
+  actors:
+  - actorType: 0
+    npcNickname:
+    enterPosition: 0
+    motion: 100
+  - actorType: 1
+    npcNickname: bspc
+    enterPosition: 10
+    motion: 0
+--- !u!114 &114900000000000002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1709254077376921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8a4e4754ed09e9d7912a7d284d8668, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Order: 2
+  stepType: 8
+  waitTimeToEnd: 0.35
+  sfxCue: {fileID: 114724804207875695, guid: ad643b64a6599114283d19280b16fe19, type: 2}
+  desc: 林中的脚步声
+--- !u!114 &114900000000000003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1709254077376921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e4df88670b8978c18bb89c853302d0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Order: 3
+  stepType: 5
+  actorType: 0
+  npcNickname:
+  textAlias: '他们背的箭袋上沾着车轴油。押运车应该刚从坡下过去。'
+  eventBgmName:
+  efxSoundCue: {fileID: 0}
+--- !u!114 &114900000000000004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1709254077376921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e4df88670b8978c18bb89c853302d0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Order: 4
+  stepType: 5
+  actorType: 1
+  npcNickname: bspc
+  textAlias: '我去认认赶车的人。你走林边，别踩乱车辙。'
+  eventBgmName:
+  efxSoundCue: {fileID: 0}
+--- !u!114 &114900000000000005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1709254077376921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e4df88670b8978c18bb89c853302d0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Order: 5
+  stepType: 5
+  actorType: 2
+  npcNickname: banji
+  textAlias: '主人，碎片不抖了。押运车上还有会吸浊气的东西吗？'
+  eventBgmName:
+  efxSoundCue: {fileID: 0}
+--- !u!114 &114709867586078768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1709254077376921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f08f7984738e0c892b99e975912a935b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Order: 8
+  stepType: 4
+  waitTimeToEnd: 1
+  actors:
+  - actorType: 0
+    npcNickname:
+    enterPosition: 0
+    motion: 102
+  - actorType: 1
+    npcNickname: bspc
+    enterPosition: 10
+    motion: 102
+--- !u!114 &114243736805655561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1709254077376921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ce65fb45f6f599aa7e7edcefac4c75, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _Order: 9
+  stepType: 1
+  fadeOut: 1
+  waitTimeToEnd: 1
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1709254077376921}
+  m_IsPrefabParent: 1

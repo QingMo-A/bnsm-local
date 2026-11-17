@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 94e55e6784e8bcadf411a6197e07d6bf
+PluginImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  platformData:
+  - first:
+      Any:
+    second:
+      enabled: 0
+      settings: {}
+  - first:
+      Android: Android
+    second:
+      enabled: 1
+      settings: {}

@@ -1,0 +1,22 @@
+{
+  "_说明": "人机日活与抽卡播报的调节参数。删掉本文件就回落到程序内置默认值（与本文件相同）。",
+  "_节奏": "MinimumPauseSeconds~MaximumPauseSeconds 是全局节奏：每隔这么久，随机挑一个人机动一次（推图赚钱、抽卡、或者只是闲着）。12 个居民轮下来，每个人大约 15~30 分钟动一次。想更热闹就把这两个值调小。",
+  "_播报": "Broadcast 里放哪几个资质档值得发到世界频道。卡牌最高资质是 SS，默认只播 SS。加 \"S\" 会明显变吵。",
+  "_经济": "FarmGoldMin/Max 是推图一次赚的金币；FarmCashChance 是顺带拿到钻石的概率，FarmCashMin/Max 是钻石数量。抽一次金币池 GoldDrawCost，钻石池 CashDrawCost。改大收入或改小花费都会让抽卡更频繁。",
+  "Enabled": true,
+  "MinimumPauseSeconds": 45,
+  "MaximumPauseSeconds": 150,
+  "FarmGoldMin": 5000,
+  "FarmGoldMax": 14000,
+  "FarmCashChance": 55,
+  "FarmCashMin": 150,
+  "FarmCashMax": 350,
+  "GoldDrawCost": 28000,
+  "CashDrawCost": 300,
+  "CashDrawChance": 20,
+  "GoldDrawChance": 45,
+  "GoldTalent": { "C": 48, "B": 34, "A": 18 },
+  "CashTalent": { "A": 48, "S": 35, "SS": 17 },
+  "Broadcast": [ "SS" ],
+  "MaxCardBook": 40
+}

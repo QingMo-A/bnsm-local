@@ -1,0 +1,38 @@
+from pathlib import Path
+r=Path('I:/BnsmModernWork')
+def patch(rel,old,new):
+ p=r/rel;s=p.read_text(encoding='utf-8-sig');assert old in s,(rel,old[:50]);p.write_text(s.replace(old,new),encoding='utf-8-sig')
+# Native neutral conquest originally skipped replay recording; local settlement uses the real simulator trace.
+patch('Project/Assets/Scripts/Assembly-CSharp/BscBattle/BattleStage.cs','SetEnemyCloneInfo(enemyInfo);\n\t\t\tCastleBattleActionType actionType', 'var localCastleEnemy=SetEnemyCloneInfo(enemyInfo);\n            if(LocalMode.Enabled)AddThumbnailToReplay(battleWave.MakeReplayRecoder(),myThumbnail,localCastleEnemy,vsBp);\n\t\t\tCastleBattleActionType actionType')
+# Some recovered prefab variants omit optional counter widgets. Their absence must not break the map update loop.
+p=r/'Project/Assets/Scripts/Assembly-CSharp/BscPrivateSiegeBattleDialog.cs';s=p.read_text(encoding='utf-8-sig');a=s.index('\tprivate void UpdateAttackNRewardCount()');b=s.index('\n\tpublic void UpdateUI()',a);s=s[:a]+'''    private void UpdateAttackNRewardCount()
+    {
+        var player=MonoSingleton<MainClient>.Instance.Player;var play=player.privateCastleBattlePlayInfo;if(play==null)return;
+        if(play.buyBonusAttackCountInfo==null)play.buyBonusAttackCountInfo=new PKBuyBonusCountInfo();
+        if(play.buyBonusExchangeCountInfo==null)play.buyBonusExchangeCountInfo=new PKBuyBonusCountInfo();
+        var vip=Singleton<DataTable>.Instance.GetVipData(player.gameInfo.namecardInfo.commonInfo.vipGrade);if(vip==null)return;
+        SetCastleCountLabel(_LabelAttackCount,(uint)Math.Max(0,vip.CastleAttackCount-(int)play.todayAttackCount)+play.buyBonusAttackCountInfo.remainPaidCount,(uint)vip.CastleAttackCount);
+        SetCastleCountLabel(_LabelRewardCount,(uint)Math.Max(0,vip.WealthPointExchangeCount-(int)play.todayExchangeCount)+play.buyBonusExchangeCountInfo.remainPaidCount,(uint)vip.WealthPointExchangeCount);
+        if(player._friendRaidCount!=null)SetCastleCountLabel(_LabelFriendRaidCount,(uint)Math.Max(0,BscBuyTicketPopup.ValidRemainTicketCount(VIP_PRICE_DISCOUNT_TYPE.VIP_PRICE_DISCOUNT_BUY_FRIEND_RAID_ENTER_COUNT)),(uint)Singleton<DataTable>.Instance.GetNumber(NUMBER_TYPE.MAX_FRIEND_RAID_COUNT));
+        uint max=(uint)Singleton<DataTable>.Instance.GetNumber(NUMBER_TYPE.CASTLE_RESTORE_HELP_COUNT);SetCastleCountLabel(_LabelHelpCount,max>play.todayRestoreCastleHelpCount?max-play.todayRestoreCastleHelpCount:0,max);
+        if(_TableStatus!=null)_TableStatus.repositionNow=true;
+    }
+    private static void SetCastleCountLabel(UILabel label,uint remaining,uint maximum){if(label==null)return;label.text=remaining+"/"+maximum;label.color=remaining==0?new Color(1f,.3f,0f):Color.white;}
+''' +s[b:];p.write_text(s,encoding='utf-8-sig')
+# Exercise the actual territory button/delegate; SendMessage to a hidden lobby does not invoke its callback.
+p=r/'Project/Assets/Scripts/Assembly-CSharp/LocalClientCompetitiveProbe.cs';s=p.read_text(encoding='utf-8-sig');old='MonoSingleton<ClientUpdate>.Instance.DoGetWorldWarTerritoryInfoRequest(6,delegate(GsGetWorldWarTerritoryInfoOk ok){WorldWarSpotPopupDialog.DoModal(6,ok,delegate{if(lobby!=null)lobby.SendMessage("OnClickGoBattle");});},null);';assert old in s;s=s.replace(old,'''var spots=UnityEngine.Object.FindObjectsOfType<WorldWarSpot>();var idField=typeof(WorldWarSpot).GetField("mapId",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic);var target=spots.FirstOrDefault(x=>(int)idField.GetValue(x)==6);checks["nativeTerritoryButton"]=target!=null;if(target!=null)target.SendMessage("OnSpotClick");''');p.write_text(s,encoding='utf-8-sig')
+# Original grouped plunder rewards draw through the same immutable loot catalog as stages.
+patch('ServerBuildSource/LocalServer/CompetitiveArenaFeatures.cs','else if(!AddShopReward(p,grant,types[i],ids[i],quantities[i]))return false;','else if(types[i]==BscTable.REWARD_TYPE.REWARD_TYPE_GROUP_ITEM){if(!AddStageRow(p,grant,BscTable.NPC_REWARD_TYPE.NPC_REWARD_TYPE_GROUP_ITEM,ids[i],quantities[i]))return false;}\n            else if(!AddShopReward(p,grant,types[i],ids[i],quantities[i]))return false;')
+# Complete the harvesting ticket track, including paid tickets and persisted quota.
+p=r/'ServerBuildSource/LocalServer/CompetitiveState.cs';s=p.read_text(encoding='utf-8-sig').replace('public uint CastleExchanges {get;set;}','public uint CastleExchangeBought {get;set;}\n    public uint CastleExchangePaidLeft {get;set;}\n    public uint CastleExchanges {get;set;}');p.write_text(s,encoding='utf-8-sig')
+patch('ServerBuildSource/LocalServer/CompetitiveFeatures.cs','c.CastleAttacks=c.CastleBought=c.CastleRecoveries','c.CastleExchangeBought=0;c.CastleAttacks=c.CastleBought=c.CastleRecoveries')
+patch('ServerBuildSource/LocalServer/CompetitiveFeatures.cs','(int)buy.priceType is 4 or 16','(int)buy.priceType is 4 or 5 or 16')
+p=r/'ServerBuildSource/LocalServer/CompetitiveExtras.cs';s=p.read_text(encoding='utf-8-sig').replace('else if((int)buy.priceType==4){bought=', 'else if((int)buy.priceType==5){bought=c.CastleExchangeBought;maximum=(uint)Math.Max(0,v.WealthPointExchangeBonusCount);}\n            else if((int)buy.priceType==4){bought=');s=s.replace('else{c.CastleBought+=count;', 'else if((int)buy.priceType==5){c.CastleExchangeBought+=count;c.CastleExchangePaidLeft+=count;left=c.CastleExchangePaidLeft;}\n            else{c.CastleBought+=count;');p.write_text(s,encoding='utf-8-sig')
+patch('ServerBuildSource/LocalServer/CompetitiveCastleFeatures.cs','buyBonusExchangeCountInfo=new()','buyBonusExchangeCountInfo=new(){todayBuyBonusCount=c.CastleExchangeBought,remainPaidCount=c.CastleExchangePaidLeft}')
+patch('ServerBuildSource/LocalServer/CompetitiveCastleFeatures.cs','p.Gold+=(uint)value;c.CastleExchanges++;','if(value==0)return Bad("no castle wealth accumulated");if(c.CastleExchanges>=catalog.VipFor(p.VipExp).WealthPointExchangeCount&&c.CastleExchangePaidLeft==0)return fail("no castle harvest entries left",ServerErrorCode.ERROR_OVER_MAX_COUNT);\n            p.Gold+=(uint)value;c.CastleExchanges++;if(c.CastleExchanges>catalog.VipFor(p.VipExp).WealthPointExchangeCount)c.CastleExchangePaidLeft--;')
+# Bind native castle admission to its catalog faction/attack conditions and available resources.
+patch('ServerBuildSource/LocalServer/CompetitiveArenaFeatures.cs','p.Decks[54]=rank.cards.ToList();pending.Cards=cards;', '''var tile=Competitive.CastleMaps.Single(x=>x.MapId==pending.Map).SpotList.Single(x=>x.SpotId==pending.Spot);var castle=Competitive.Castles.Single(x=>x.Id==tile.CastleId);
+                if(cards.Any(seq=>{var card=catalog.Cards.Single(x=>x.Id==p.CardIds[(int)seq-1]);return castle.FactionCond!=BscTable.CARD_FACTION.FACTION_ALL&&card.Faction!=castle.FactionCond||castle.AttackTypeCond==BscTable.CASTLE_ATTACK_TYPE.CASTLE_ATTACK_TYPE_FORCE&&card.AttackType!=BscTable.ATTACK_TYPE.ATTACK_FORCE||castle.AttackTypeCond==BscTable.CASTLE_ATTACK_TYPE.CASTLE_ATTACK_TYPE_PHYSICAL&&card.AttackType!=BscTable.ATTACK_TYPE.ATTACK_PHYSICAL;}))return Bad("castle native roster restrictions");
+                int gold=pending.Action==1?castle.PlunderConsumeGold:pending.Action==0?castle.FirstConsumeGold:castle.RestoreConsumeGold,cash=pending.Action==1?castle.PlunderConsumeGem:pending.Action==0?castle.FirstConsumeGem:castle.RestoreConsumeGem,stamina=pending.Action==1?castle.PlunderConsumeStamina:pending.Action==0?castle.FirstConsumeStamina:castle.RestoreConsumeStamina;
+                if(p.Gold<gold||p.CashPoint<cash||p.Stamina<stamina)return fail("not enough castle admission resources",ServerErrorCode.ERROR_NOT_ENOUGH_STAMINA);
+                p.Decks[54]=rank.cards.ToList();pending.Cards=cards;''')

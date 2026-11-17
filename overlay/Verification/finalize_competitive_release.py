@@ -1,0 +1,16 @@
+import datetime,hashlib,json,pathlib
+r=pathlib.Path('I:/BnsmModernWork')
+def read(rel):return json.loads((r/rel).read_text(encoding='utf-8-sig'))
+def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+win=read('Verification/windows-full-release.json');mobile=read('Verification/mobile-publication-latest.json');server=read('Verification/competitive-server-latest.json')
+native={mode:read('Verification/competitive-native-'+mode+'-latest.json') for mode in ['arena','rank','balance','castle','world','infinite']}
+assert win['passed'] and mobile['passed'] and server['passed'] and all(x['passed'] for x in native.values())
+assert all(x['clientAssemblySha256']==win['clientAssemblySha256'] and x['serverCoreSha256']==win['serverCoreSha256'] for x in native.values())
+assert win['sameServerCoreAsAndroid'] and digest(r/'Builds/PhoneServer/apk/Bnsm.ServerCore.dll')==win['serverCoreSha256']
+expected={'WindowsPreview/LocalServer/data/gacha.json':'de7402c41bbd586a67043819331776fea1a8d529e263a77364e2da0c8d12d908','Builds/PhoneServer/server-content.zip':'a6b3effbbadd49954ae2343df083fcb5a3b4cd1375c37982ee3683b2f39f3ab1','Project/Assets/StreamingAssets/DynamicAssets/CDT.bytes':'1ade0ffce7b3b59d4b6fe326be7f089612fd2ea02a7bf49f12bc595712cc2a76'}
+assert all(digest(r/path)==value for path,value in expected.items())
+report={'published':True,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'serverChecks':len(server['checks']),'nativeBattleModes':list(native),'nativeErrors':sum(x['errors'] for x in native.values()),'clientAssemblySha256':win['clientAssemblySha256'],'serverCoreSha256':win['serverCoreSha256'],'windows':{k:win[k] for k in ['archive','archiveBytes','archiveSha256','installedDirectory','sameServerCoreAsAndroid']},'mobile':mobile['packages'],'nativeReports':{k:v['folder'] for k,v in native.items()},'normalSaveUsed':False,'immutableCatalogsPreserved':expected,'deviceVerified':False,'scope':'Local bot battle entry, ammunition, core combat, settlement, persistence and supporting quotas/rewards. Native AI uses legitimate high-tier builds.','limitations':['Real player live matchmaking is not implemented.','Retired castle mercenary/help and paid auto-win branches are not complete.','Scheduled daily/weekly ladder prize payouts and historical replay downloads are not complete.','Android device gameplay has not been verified for this release.']}
+(r/'Verification/competitive-release.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8')
+status=read('migration-status.json');status.update(phase='Competitive local bot battle core verified and published for Windows x64 and Android game/server v11.',competitiveLatest=report);(r/'migration-status.json').write_text(json.dumps(status,ensure_ascii=False,indent=2),encoding='utf8')
+manifest=read('Builds/latest-artifacts.json');manifest['updatedUtc']=report['utc'];(r/'Builds/latest-artifacts.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf8')
+print(json.dumps({'published':True,'serverChecks':report['serverChecks'],'nativeBattleModes':report['nativeBattleModes'],'nativeErrors':report['nativeErrors'],'sameServerCoreAsAndroid':win['sameServerCoreAsAndroid'],'mobileVersions':[p['versionCode'] for p in mobile['packages']]},ensure_ascii=False))

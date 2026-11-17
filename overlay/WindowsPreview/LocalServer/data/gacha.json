@@ -1,0 +1,13 @@
+{
+  "cardRank": 4,
+  "resourceChancePercent": 80,
+  "pieceByTalent": { "C": 10, "B": 15, "A": 20, "S": 30, "SS": 40 },
+  "resources": [
+    { "type": "ITEM", "itemId": 260000001, "min": 3, "max": 8, "weight": 26 },
+    { "type": "ITEM", "itemId": 260000002, "min": 2, "max": 6, "weight": 18 },
+    { "type": "ITEM", "itemId": 210002001, "min": 20, "max": 60, "weight": 22 },
+    { "type": "PIECE", "min": 1, "max": 3, "weight": 14 },
+    { "type": "GEM", "maxStep": 3, "min": 1, "max": 1, "weight": 12 },
+    { "type": "STAMINA", "itemId": 208002003, "min": 1, "max": 1, "weight": 8 }
+  ]
+}

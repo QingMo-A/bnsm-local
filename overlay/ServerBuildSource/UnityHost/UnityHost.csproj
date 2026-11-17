@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <NuGetAudit>false</NuGetAudit>
+    <AssemblyName>Bnsm.EmbeddedServer</AssemblyName>
+    <DefineConstants>$(DefineConstants);BNSM_SERVER;BNSM_UNITY_EMBEDDED</DefineConstants>
+    <Root>$(MSBuildProjectDirectory)/../..</Root>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Bnsm.LocalServer" />
+    <EmbeddedResource Include="$(Root)/Project/Assets/Resources/LocalStoryCatalog.json" LogicalName="LocalStoryCatalog.json" />
+    <Compile Include="../../Research/AndroidInProcess/Compatibility/obj/PortableSources/*.cs" Link="Portable/%(Filename)%(Extension)" />
+    <Compile Include="$(Root)/ServerBuildSource/UnityRebuilt/ExportedProject/Assets/Scripts/Assembly-CSharp/LocalConnectionSettings.cs" />
+    <Compile Include="$(Root)/ServerBuildSource/UnityRebuilt/ExportedProject/Assets/Scripts/Assembly-CSharp/LocalDebugFlags.cs" />
+    <Compile Include="$(Root)/ServerBuildSource/UnityRebuilt/ExportedProject/Assets/Scripts/Assembly-CSharp/LocalEquipmentWire.cs" />
+    <Compile Include="$(Root)/Project/Assets/Scripts/Assembly-CSharp/LocalRankCombatWire.cs" />
+    <Compile Include="$(Root)/Project/Assets/Scripts/Assembly-CSharp/LocalOriginalCardDefinition.cs" />
+    <Compile Include="$(Root)/Project/Assets/Scripts/Assembly-CSharp/LocalCardRegistry.cs" />
+    <Compile Include="$(Root)/Project/Assets/Scripts/Assembly-CSharp/LocalHongEquipment.cs" />
+    <Compile Include="$(Root)/Project/Assets/Scripts/Assembly-CSharp/LocalHongRelations.cs" />
+    <Compile Include="$(Root)/Project/Assets/Scripts/Assembly-CSharp/LocalHongCard.cs" />
+    <Compile Include="$(Root)/Project/Assets/Scripts/Assembly-CSharp/LocalStoryChapter.cs" />
+    <Compile Include="$(Root)/Project/Assets/Scripts/Assembly-CSharp/LocalAdventureChapter53.cs" />
+    <Compile Include="$(Root)/Project/Assets/Scripts/Assembly-CSharp/LocalAdventureDropRules.cs" />
+    <Compile Include="$(Root)/Project/Assets/Scripts/Assembly-CSharp/LocalHelperCostumeDefinition.cs" />
+    <Compile Include="$(Root)/Project/Assets/Scripts/Assembly-CSharp/LocalCastleMapRules.cs" />
+    <Compile Include="$(Root)/Project/Assets/Scripts/Assembly-CSharp/LocalBattleLifecycleWire.cs" />
+    <Reference Include="Bnsm.ServerGameModel"><HintPath>obj/Isolated/Bnsm.ServerGameModel.dll</HintPath><Aliases>game</Aliases></Reference>
+    <Reference Include="protobuf-net"><HintPath>$(Root)/ServerBuildSource/references/Managed/protobuf-net.dll</HintPath></Reference>
+    <Reference Include="Bnsm.ServerLegacyEngine"><HintPath>obj/Isolated/Bnsm.ServerLegacyEngine.dll</HintPath></Reference>
+    <PackageReference Include="System.Text.Json" Version="10.0.0" />
+    <PackageReference Include="System.Threading.Channels" Version="10.0.0" />
+  </ItemGroup>
+</Project>

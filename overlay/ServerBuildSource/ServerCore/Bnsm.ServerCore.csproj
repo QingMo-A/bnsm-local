@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework Condition="'$(BnsmTargetFramework)' == ''">net10.0</TargetFramework>
+    <TargetFramework Condition="'$(BnsmTargetFramework)' != ''">$(BnsmTargetFramework)</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <NuGetAudit>false</NuGetAudit>
+    <DefineConstants>$(DefineConstants);BNSM_SERVER</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="../../Project/Assets/Resources/LocalStoryCatalog.json" LogicalName="LocalStoryCatalog.json" />
+    <!-- One business implementation for the Windows and Android hosts. -->
+    <Compile Include="../LocalServer/*.cs" Exclude="../LocalServer/Program.cs;../LocalServer/DebugApi.cs;../LocalServer/*Test.cs;../LocalServer/*Audit.cs;../LocalServer/TableExtractor.cs" Link="Business/%(Filename)%(Extension)" />
+    <Compile Include="../UnityRebuilt/ExportedProject/Assets/Scripts/Assembly-CSharp/LocalConnectionSettings.cs" Link="Connection/LocalConnectionSettings.cs" />
+    <Compile Include="../UnityRebuilt/ExportedProject/Assets/Scripts/Assembly-CSharp/LocalDebugFlags.cs" Link="Debug/LocalDebugFlags.cs" />
+    <Compile Include="../UnityRebuilt/ExportedProject/Assets/Scripts/Assembly-CSharp/LocalEquipmentWire.cs" Link="Equipment/LocalEquipmentWire.cs" />
+    <Compile Include="../../Project/Assets/Scripts/Assembly-CSharp/LocalRankCombatWire.cs" Link="Competitive/LocalRankCombatWire.cs" />
+    <Compile Include="../../Project/Assets/Scripts/Assembly-CSharp/LocalOriginalCardDefinition.cs" Link="Cards/LocalOriginalCardDefinition.cs" />
+    <Compile Include="../../Project/Assets/Scripts/Assembly-CSharp/LocalCardRegistry.cs" Link="Cards/LocalCardRegistry.cs" />
+    <Compile Include="../../Project/Assets/Scripts/Assembly-CSharp/LocalHongEquipment.cs" Link="Cards/LocalHongEquipment.cs" />
+    <Compile Include="../../Project/Assets/Scripts/Assembly-CSharp/LocalHongRelations.cs" Link="Cards/LocalHongRelations.cs" />
+    <Compile Include="../../Project/Assets/Scripts/Assembly-CSharp/LocalHongCard.cs" Link="Cards/LocalHongCard.cs" />
+    <Compile Include="../../Project/Assets/Scripts/Assembly-CSharp/LocalStoryChapter.cs" Link="Cards/LocalStoryChapter.cs" />
+    <Compile Include="../../Project/Assets/Scripts/Assembly-CSharp/LocalAdventureDropRules.cs" Link="Battle/LocalAdventureDropRules.cs" />
+    <Compile Include="../../Project/Assets/Scripts/Assembly-CSharp/LocalAdventureChapter53.cs" Link="Battle/LocalAdventureChapter53.cs" />
+    <Compile Include="../../Project/Assets/Scripts/Assembly-CSharp/LocalHelperCostumeDefinition.cs" Link="Helpers/LocalHelperCostumeDefinition.cs" />
+    <Compile Include="../../Project/Assets/Scripts/Assembly-CSharp/LocalCastleMapRules.cs" Link="Competitive/LocalCastleMapRules.cs" />
+    <Compile Include="../../Project/Assets/Scripts/Assembly-CSharp/LocalBattleLifecycleWire.cs" Link="Battle/LocalBattleLifecycleWire.cs" />
+    <InternalsVisibleTo Include="Bnsm.LocalServer" />
+    <InternalsVisibleTo Include="Bnsm.AndroidHost" />
+    <Reference Include="Assembly-CSharp"><HintPath>../build/Assembly-CSharp.dll</HintPath><Aliases>game</Aliases></Reference>
+    <Reference Include="protobuf-net"><HintPath>../references/Managed/protobuf-net.dll</HintPath></Reference>
+    <Reference Include="UnityEngine"><HintPath>../references/Managed/UnityEngine.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,64 @@
+{
+  "note": [
+    "本地签到与运营活动配置。",
+    "shortTerm 由服务端直接下发（客户端不读表）；days 数组第 n 项的 accrueCount 就是 n，不能跳号。",
+    "operations 会原样下发成 OperationData，客户端据此显示掉落加成标签、开启资源关。",
+    "operations[].value 必须大于 1，否则客户端 GetOperationValue 会当成未开启（RESOURCE_STAGE_ALL_OPEN 例外）。"
+  ],
+
+  "shortTerm": {
+    "title": "短期签到",
+    "note": "连续领取 15 天。奖励类型：GOLD / CASH / STAMINA / ITEM。",
+    "days": [
+      { "rewards": [ { "type": "GOLD",    "id": 0, "count": 20000 } ] },
+      { "rewards": [ { "type": "CASH",    "id": 0, "count": 50    } ] },
+      { "rewards": [ { "type": "STAMINA", "id": 0, "count": 60    } ] },
+      { "rewards": [ { "type": "GOLD",    "id": 0, "count": 30000 } ] },
+      { "rewards": [ { "type": "CASH",    "id": 0, "count": 80    } ] },
+      { "rewards": [ { "type": "STAMINA", "id": 0, "count": 60    } ] },
+      { "rewards": [ { "type": "CASH",    "id": 0, "count": 150   } ] },
+      { "rewards": [ { "type": "GOLD",    "id": 0, "count": 40000 } ] },
+      { "rewards": [ { "type": "CASH",    "id": 0, "count": 100   } ] },
+      { "rewards": [ { "type": "STAMINA", "id": 0, "count": 60    } ] },
+      { "rewards": [ { "type": "GOLD",    "id": 0, "count": 50000 } ] },
+      { "rewards": [ { "type": "CASH",    "id": 0, "count": 120   } ] },
+      { "rewards": [ { "type": "STAMINA", "id": 0, "count": 60    } ] },
+      { "rewards": [ { "type": "GOLD",    "id": 0, "count": 60000 } ] },
+      { "rewards": [ { "type": "CASH",    "id": 0, "count": 300   } ] }
+    ]
+  },
+
+  "operations": {
+    "note": "长期开启的本地运营活动。start/end 用 yyyy-MM-dd HH:mm:ss，客户端按服务端时间比较。",
+    "items": [
+      {
+        "id": 1001,
+        "type": "NORMAL_BATTLE_ITEM_DROP",
+        "value": 150,
+        "start": "2020-01-01 00:00:00",
+        "end": "2099-12-31 23:59:59"
+      },
+      {
+        "id": 1002,
+        "type": "HARD_BATTLE_ITEM_DROP",
+        "value": 150,
+        "start": "2020-01-01 00:00:00",
+        "end": "2099-12-31 23:59:59"
+      },
+      {
+        "id": 1003,
+        "type": "LEGEND_BATTLE_ITEM_DROP",
+        "value": 150,
+        "start": "2020-01-01 00:00:00",
+        "end": "2099-12-31 23:59:59"
+      },
+      {
+        "id": 1004,
+        "type": "RESOURCE_STAGE_ALL_OPEN",
+        "value": 1,
+        "start": "2020-01-01 00:00:00",
+        "end": "2099-12-31 23:59:59"
+      }
+    ]
+  }
+}
